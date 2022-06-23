@@ -5,8 +5,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class RayTracingMasster : MonoBehaviour
 {
     public ComputeShader RayTracingShader;
@@ -15,6 +13,13 @@ public class RayTracingMasster : MonoBehaviour
     private uint _currentSample = 0;
     private Material _addMaterial;
     public float scalias = 1f;
+    
+    private struct Sphere
+    {
+        public Vector3 position;
+        public float radius;
+        public Vector3 albedo;
+    }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {

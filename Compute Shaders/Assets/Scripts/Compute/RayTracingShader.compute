@@ -12,9 +12,6 @@ static const float PI = 3.14159265f;
 // Offset sampled pixel to create aliasing effect
 float2 _PixelOffset;
 
-
-
-
 struct Ray
 {
     float3 origin;
